@@ -7,7 +7,7 @@
 ╚═╝  ╚═╝╚══════╝ ╚═════╝╚═╝╚═╝     ╚══════╝╚══════╝
 ```
 # Recipes
-[InteliJ JetBrains:  JAVA BACKEND DEVELOPER COURSE](https://hyperskill.org/projects/180)
+[JAVA BACKEND DEVELOPER COURSE by IntelliJ JetBrains](https://hyperskill.org/projects/180)
 
 >Recipes is a graduate project for track Java Backend Developer.
 Graduate projects contain core topics for this track. You need to apply core topics in project stages to verify your knowledge. At least one graduate project is required to complete the track.
@@ -31,8 +31,8 @@ Java Backend Developer
 
 ### Frameworks Deployed
 - Java
-- Spring Boot Starter, Spring Boot JPA, Spring Boot JDBC, Spring Boot Security
+- Spring Boot Starter, Spring Boot JPA, Spring Boot JDBC, Spring MVC, Spring Boot Security
 - Gradle
 - JPA/Hibernate
 - H2/SQL
-- InteliJ (IDE)
+- IntelliJ (IDE)
