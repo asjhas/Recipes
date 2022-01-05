@@ -1,0 +1,45 @@
+buildscript {
+    apply plugin: 'hyperskill'
+
+    repositories {
+        mavenCentral()
+        maven {url "https://plugins.gradle.org/m2/"}
+    }
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:$hs.spring.bootVersion"
+        classpath "io.spring.gradle:dependency-management-plugin:$hs.spring.dependencyManagementVersion"
+        classpath "io.freefair.gradle:lombok-plugin:6.3.0"
+    }
+    configurations {
+        compile.exclude module: 'spring-boot-starter-tomcat'
+        compile.exclude group: 'org.apache.tomcat'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'io.freefair.lombok'
+
+
+repositories {
+    mavenCentral()
+    maven {url "https://mvnrepository.com/artifact/org.json/json"}
+}
+
+sourceSets.main.resources.srcDirs = ["src/resources"]
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'com.h2database:h2'
+    // https://mvnrepository.com/artifact/org.json/json
+    implementation group: 'org.json', name: 'json', version: '20211205'
+    implementation group: 'org.zalando', name: 'logbook-spring-boot-starter', version: '2.14.0'
+    implementation 'io.rest-assured:rest-assured:4.4.0'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+}
